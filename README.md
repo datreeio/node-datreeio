@@ -1,4 +1,4 @@
-# DaTree.io
+# datree.io
 ## Node.js Module to integrate with NPM
 
 [![Build Status](https://travis-ci.org/datreeio/node-datreeio.svg?branch=master)](https://travis-ci.org/datreeio/node-datreeio)
