@@ -9,7 +9,7 @@ A Node.js module to help you get insight into your package managing
 
 <p align="center">
   <img
-    src="https://s3.amazonaws.com/datreeio-static/tty.gif" alt="Flow example">
+    src="https://s3.amazonaws.com/datreeio-static/example.gif" alt="Flow example">
 </p>
 
 ## Installation
