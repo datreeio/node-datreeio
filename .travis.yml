@@ -1,0 +1,20 @@
+sudo: false
+dist: trusty
+language: node_js
+node_js:
+- "4"
+- "6"
+- "8"
+- "stable"
+env:
+  - TEST_SUITE=test
+install:
+  - "npm install --ignore-scripts"
+script: "npm run $TEST_SUITE"
+
+jobs:
+  include:
+    - stage: npm release
+      if: branch = master AND type = push
+      node_js: "8"
+      script: npm run-script build && npm run semantic-release

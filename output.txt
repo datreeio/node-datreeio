@@ -1,0 +1,8 @@
+Alternative Packages
+┌──────────────┬───────────────┬─────────┬─────────────────────────┬────────────┬──────────┬────────┐
+│ Package Name │ Smart Version │ License │ Description             │ Deprecated │ My Usage │ Score  │
+│              │               │         │                         │            │          │        │
+│ koa          │ 2.0.0         │ MIT     │ Koa web app framewor... │ X          │ 100.00%  │ 89.00% │
+│ express      │ 4.13.3        │ MIT     │ Fast, unopinionated,... │ X          │ 0.00%    │ 72.00% │
+│ hapi         │ 16.1.0        │ BSD-... │ HTTP Server framewor... │ X          │ 0.00%    │ 63.00% │
+└──────────────┴───────────────┴─────────┴─────────────────────────┴────────────┴──────────┴────────┘

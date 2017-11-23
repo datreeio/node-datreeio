@@ -1,0 +1,5 @@
+node_modules/*
+.vscode
+.nyc_output
+dist/*
+.DS_Store
