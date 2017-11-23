@@ -7,9 +7,14 @@
 ## Summary
 A Node.js module to help you get insight into your package managing
 
+<p align="center">
+  <img
+    src="https://s3.amazonaws.com/datreeio-static/tty.gif" alt="Flow example">
+</p>
+
 ## Installation
 ```bash
-$ npm install
+$ npm install -g datreeio
 ```
 
 ## Build
