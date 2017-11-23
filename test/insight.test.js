@@ -25,7 +25,7 @@ describe(`Insights`, async function () {
     let stub = sinon.stub(request, 'post').rejects({})
     try {
       let res = await getInsights(data)
-      assert.deepStrictEqual({}, res)
+      assert.deepStrictEqual([], res)
     } catch (err) {
       assert.ifError(err)
     } finally {
