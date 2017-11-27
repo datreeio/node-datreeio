@@ -1,9 +1,13 @@
-/* global describe it */
+/* global describe it before */
 
 require('babel-polyfill')
 const Renderer = require('../lib/cli-renderer')
 const sinon = require('sinon')
+const chalk = require('chalk')
 const assert = require('assert')
+const chai = require('chai')
+
+chai.should()
 
 describe('Renderer', function () {
   describe('renderTable', function () {
@@ -242,6 +246,23 @@ describe('Renderer', function () {
       title: 'Alternative Packages',
       data: serverResponse.insight,
       weights: serverResponse.userWeights
+    })
+    renderer.queue.length.should.be.above(1)
+  })
+
+  describe('renderFooter', function () {
+    const renderer = new Renderer()
+    before(function () {
+      renderer.renderFooter(['koa', 'mongoose'])
+    })
+
+    it('adds 2 entries to the queue', function () {
+      renderer.queue.length.should.equal(2)
+    })
+
+    it('should have the correct links for the footer', function () {
+      renderer.queue[0].should.eql(chalk`{blue.bold https://platform.datree.io/pkg/single-package/koa}`)
+      renderer.queue[1].should.eql(chalk`{blue.bold https://platform.datree.io/pkg/single-package/mongoose}`)
     })
   })
 })
