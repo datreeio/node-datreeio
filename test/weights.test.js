@@ -26,7 +26,7 @@ describe('weights', function() {
     stubRequestGet.restore()
   })
 
-  it('gets the right weights from the file', function() {
+  it('gets the right weights for the user', function() {
     weightsRes.should.equal(EXPECTED_WEIGHTS)
   })
 })
