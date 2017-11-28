@@ -8,7 +8,6 @@
       "nyc ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/ && nyc report --reporter=text-lcov | coveralls",
     "test-html":
       "nyc --reporter=html --reporter=text ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/ && open coverage/index.html",
-    "standard": "standard --fix --verbose | snazzy",
     "clean": "rm -rf dist",
     "build":
       "npm run clean && mkdir dist && babel index.js lib/* -s -d dist && babel lib/insight.js -s -o dist/lib/insightCompiled.js && cp package.json dist/",
@@ -35,7 +34,6 @@
     "semantic-release": "^8.0.0",
     "sinon": "^2.3.8",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.2",
     "webpack": "^3.5.6"
   },
   "dependencies": {
