@@ -12,14 +12,14 @@ const logger = loggerFactory.get('main')
 chai.should()
 
 describe('Renderer', function() {
-  describe('renderTable', function() {
+  describe('renderPackagesTable', function() {
     const Table = require('cli-table')
     it('adds string representation of the table to the internal rendering queue', function() {
       sinon.spy(Table.prototype, 'toString')
       try {
         const renderer = new Renderer({ logger })
         sinon.stub(renderer, 'render').returns()
-        renderer.renderTable({
+        renderer.renderPackagesTable({
           title: 'test',
           data: [
             {
@@ -254,7 +254,7 @@ describe('Renderer', function() {
       ]
     }
     const renderer = new Renderer({ logger })
-    renderer.renderTable({
+    renderer.renderPackagesTable({
       title: 'Alternative Packages',
       data: serverResponse.insight,
       weights: serverResponse.userWeights
