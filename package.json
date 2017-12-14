@@ -4,12 +4,17 @@
   "description": "datree.io Node.js module",
   "main": "dist/index.js",
   "scripts": {
-    "test": "nyc ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/ && nyc report --reporter=text-lcov | coveralls",
-    "test-html": "nyc --reporter=html --reporter=text ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/ && open coverage/index.html",
+    "test":
+      "nyc ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/ && nyc report --reporter=text-lcov | coveralls",
+    "test-html":
+      "nyc --reporter=html --reporter=text ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/ && open coverage/index.html",
     "clean": "rm -rf dist",
-    "build": "npm run clean && mkdir dist && babel index.js lib/* -s -d dist && babel lib/insight.js -s -o dist/lib/insightCompiled.js && cp package.json dist/",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "semantic-release-local": "semantic-release pre --debug=false && npm publish && semantic-release post --debug=false",
+    "build":
+      "npm run clean && mkdir dist && babel index.js lib/* -s -d dist && cp package.json dist/",
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release-local":
+      "semantic-release pre --debug=false && npm publish && semantic-release post --debug=false",
     "postinstall": "node dist/lib/install.js",
     "preuninstall": "node dist/lib/uninstall.js"
   },
