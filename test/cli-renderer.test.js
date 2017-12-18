@@ -262,10 +262,10 @@ describe('Renderer', function() {
     renderer.queue.length.should.be.above(1)
   })
 
-  describe('renderLinks', function() {
+  describe('renderLink', function() {
     const renderer = new Renderer({ logger })
     before(function() {
-      renderer.renderLinks('single', [
+      renderer.renderLink('single', [
         { source: { name: 'koa', deprecated: true } },
         { source: { name: 'mongoose', deprecated: true } },
         { source: { name: 'notDeprecated', deprecated: false } }
@@ -273,14 +273,14 @@ describe('Renderer', function() {
     })
 
     it('adds 2 entries to the queue', function() {
-      renderer.queue.length.should.equal(3)
+      renderer.queue.length.should.equal(2)
     })
 
     it('should have the correct links for the footer', function() {
-      renderer.queue[1].should.eql(
+      renderer.queue[0].should.eql(
         chalk`{blue.bold https://platform.datree.io/pkg/single-package/koa}`
       )
-      renderer.queue[2].should.eql(
+      renderer.queue[1].should.eql(
         chalk`{blue.bold https://platform.datree.io/pkg/single-package/mongoose}`
       )
     })
