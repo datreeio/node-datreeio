@@ -10,7 +10,7 @@ A Node.js module to help you get useful insights when installing packages/projec
 The package is based on NPMs' [onload-script](https://docs.npmjs.com/misc/config#onload-script) in order to provide you continues insight
 with zero effort (there is no need to actively call the package).
 
-:exclamation: DON'T SUPPORT WIMDOWS OS :exclamation:
+:exclamation: WINDOWS OS IS NOT SUPPORTED :exclamation:
 
 ## Table Of Contents:
 * [Installation](https://github.com/datreeio/node-datreeio#installation)
@@ -35,7 +35,8 @@ $ npm install -g datreeio
 
 ### smart version insight
 for every package.json you will install (npm install / i), you will get insight about your dependencies versions:
-
+First Header | Second Header
+------------ | -------------
 
 ### alternative packages insight
 
