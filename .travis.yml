@@ -25,15 +25,28 @@ jobs:
       install: npm install --only=dev --ignore-scripts
       script: npm run test-integration
       node_js: "4"
-      os: 
-      - linux
-      - os x
+      os: linux
+    - <<: *integ-test
+      node_js: "4"
+      os: osx
     - <<: *integ-test
       node_js: "6"
+      os: linux
+    - <<: *integ-test
+      node_js: "6"
+      os: osx
     - <<: *integ-test
       node_js: "8"
+      os: linux
+    - <<: *integ-test
+      node_js: "8"
+      os: osx
     - <<: *integ-test
       node_js: "stable"
+      os: linux
+    - <<: *integ-test
+      node_js: "stable"
+      os: osx
     - stage: npm release
       if: branch = master AND type = push
       node_js: "8"
