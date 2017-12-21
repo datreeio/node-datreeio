@@ -12,6 +12,10 @@ os:
 env:
   - TEST_SUITE=test
   - TEST_SUITE=test-integreation
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install jq; fi
+  - if [[ `node --version` ==  v6* ]]; then npm install -g npm; fi
 install:
   - "npm install --ignore-scripts"
 script: "npm run $TEST_SUITE"

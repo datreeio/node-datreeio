@@ -3,7 +3,7 @@
 set -xe
 
 function test {
- $TRAVIS_BUILD_DIR/node_modules/mocha/bin/mocha --require babel-core/register $TRAVIS_BUILD_DIR/test/$1
+ $TRAVIS_BUILD_DIR/node_modules/mocha/bin/mocha --require babel-core/register $TRAVIS_BUILD_DIR/test/integration/$1
 }
 
 function install_packages {
