@@ -21,17 +21,19 @@ script:
 jobs:
   include:
     - stage: integration test
-      node_js:
-        - "4"
-        - "6"
-        - "8"
-        - "stable"
-      os:
-        - linux
-        - osx
+    - &integ-test
       install: npm install --only=dev --ignore-scripts
-      script:
-      - npm run test-integreation
+      script: npm run test-integration
+      node_js: "4"
+      os: 
+      - linux
+      - os x
+    - <<: *integ-test
+      node_js: "6"
+    - <<: *integ-test
+      node_js: "8"
+    - <<: *integ-test
+      node_js: "stable"
     - stage: npm release
       if: branch = master AND type = push
       node_js: "8"
