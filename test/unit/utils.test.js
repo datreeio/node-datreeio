@@ -1,6 +1,6 @@
 /* global describe it */
 require('babel-polyfill')
-const { getSystemInfo } = require('./../lib/utils')
+const { getSystemInfo } = require('./../../lib/utils')
 const assert = require('assert')
 
 describe('Utils', function() {

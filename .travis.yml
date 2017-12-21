@@ -6,8 +6,12 @@ node_js:
 - "6"
 - "8"
 - "stable"
+os:
+- linux
+- osx
 env:
   - TEST_SUITE=test
+  - TEST_SUITE=test-integreation
 install:
   - "npm install --ignore-scripts"
 script: "npm run $TEST_SUITE"

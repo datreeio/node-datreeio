@@ -2,8 +2,8 @@
 require('babel-polyfill')
 const chai = require('chai')
 const sinon = require('sinon')
-const weights = require('../lib/weights')
-const utils = require('../lib/utils')
+const weights = require('../../lib/weights')
+const utils = require('../../lib/utils')
 const request = require('request-promise-native')
 
 chai.should()

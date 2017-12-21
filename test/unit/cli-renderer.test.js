@@ -1,12 +1,12 @@
 /* global describe it before */
 
 require('babel-polyfill')
-const Renderer = require('../lib/cli-renderer')
+const Renderer = require('../../lib/cli-renderer')
 const sinon = require('sinon')
 const chalk = require('chalk')
 const assert = require('assert')
 const chai = require('chai')
-const loggerFactory = require('../lib/loggerFactory')
+const loggerFactory = require('../../lib/loggerFactory')
 const logger = loggerFactory.get('main')
 
 chai.should()

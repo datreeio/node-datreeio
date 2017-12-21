@@ -2,8 +2,8 @@
 require('babel-polyfill')
 const chai = require('chai')
 const sinon = require('sinon')
-const utils = require('../lib/utils')
-const auth = require('../lib/auth')
+const utils = require('../../lib/utils')
+const auth = require('../../lib/auth')
 
 chai.should()
 const EXPECTED_TOKEN = 'abcde123'
