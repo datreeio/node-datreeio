@@ -8,7 +8,7 @@
       "nyc ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/unit && nyc report --reporter=text-lcov | coveralls",
     "test-html":
       "nyc --reporter=html --reporter=text ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/unit && open coverage/index.html",
-    "test-integreation": "./test/integration/test.sh",
+    "test-integration": "./test/integration/test.sh",
     "clean": "rm -rf dist",
     "build":
       "npm run clean && mkdir dist && babel index.js lib/* -s -d dist && cp package.json dist/",
