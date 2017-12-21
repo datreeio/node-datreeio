@@ -14,18 +14,16 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install jq; fi
   - if [[ `node --version` ==  v6* ]]; then npm install -g npm; fi
 install:
-  - "echo not installing"
+  - npm install --ignore-scripts
+script:
+  - npm run test
 
 jobs:
   include:
-    - stage: unit test
-      script: 
-      - npm install --ignore-scripts
-      - npm run test-integreation
     - stage: integration test
+      install: npm install --only=dev --ignore-scripts
       script:
-      - npm install --only=dev --ignore-scripts
-      - npm run test
+      - npm run test-integreation
     - stage: npm release
       if: branch = master AND type = push
       node_js: "8"
