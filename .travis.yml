@@ -21,6 +21,14 @@ script:
 jobs:
   include:
     - stage: integration test
+      node_js:
+        - "4"
+        - "6"
+        - "8"
+        - "stable"
+      os:
+        - linux
+        - osx
       install: npm install --only=dev --ignore-scripts
       script:
       - npm run test-integreation
