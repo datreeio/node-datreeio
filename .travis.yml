@@ -20,8 +20,8 @@ script:
 
 jobs:
   include:
-    - stage: integration test
     - &integ-test
+      stage: integration test
       install: npm install --only=dev --ignore-scripts
       script: npm run test-integration
       node_js: "4"
