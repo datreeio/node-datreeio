@@ -22,7 +22,7 @@ jobs:
   include:
     - &integ-test
       stage: integration test
-      install: npm install --only=dev --ignore-scripts
+      install: npm install --ignore-scripts
       script: npm run test-integration
       node_js: "4"
       os: linux
