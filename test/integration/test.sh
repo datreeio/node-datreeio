@@ -49,7 +49,7 @@ function main {
   install_packages norun.test.js
 
   # Print debug log
-  cat ~/.datreeio/debug.log | jq
+  cat ~/.datreeio/debug.log
 }
 
 main
