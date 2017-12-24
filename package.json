@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "test":
-      "nyc ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/unit && nyc report --reporter=text-lcov | coveralls",
+      "nyc ./node_modules/mocha/bin/mocha --require babel-core/register test/unit && nyc report --reporter=text-lcov | coveralls",
     "test-html":
-      "nyc --reporter=html --reporter=text ./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/unit && open coverage/index.html",
+      "nyc --reporter=html --reporter=text ./node_modules/mocha/bin/mocha --require babel-core/register test/unit && open coverage/index.html",
     "test-integration": "./test/integration/test.sh",
     "clean": "rm -rf dist",
     "build":
