@@ -2,7 +2,7 @@
 
 require('babel-polyfill')
 const fs = require('fs')
-const node = require('../lib/node')
+const node = require('../../lib/node')
 const sinon = require('sinon')
 const assert = require('assert')
 

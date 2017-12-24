@@ -2,7 +2,7 @@
 
 require('babel-polyfill')
 const assert = require('assert')
-const args = require('../lib/argumentsExtractor')
+const args = require('../../lib/argumentsExtractor')
 
 describe('Argv module', async function() {
   let packages, actionArgs
