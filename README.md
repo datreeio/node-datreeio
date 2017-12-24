@@ -2,9 +2,31 @@
 
 ## Node.js Module to integrate with NPM
 
-[![Build Status](https://travis-ci.org/datreeio/node-datreeio.svg?branch=master)](https://travis-ci.org/datreeio/node-datreeio)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Coverage Status](https://coveralls.io/repos/github/datreeio/node-datreeio/badge.svg?branch=master)](https://coveralls.io/github/datreeio/node-datreeio?branch=master)
+<a href="./LICENSE">
+    <img
+      	alt="license:mit"
+        src="https://img.shields.io/github/license/datreeio/node-datreeio.svg?style=flat-square"
+    />
+</a>
+<a href="https://www.npmjs.com/packages/datreeio">
+	<img
+      	alt="node:?"
+      	src="https://img.shields.io/badge/node-%3E=4.0-blue.svg?style=flat-square"
+    />
+</a>
+<a href="https://travis-ci.org/datreeio/node-datreeio">
+    <img
+      	alt="build:?"
+      	src="https://img.shields.io/travis/datreeio/node-datreeio/master.svg?style=flat-square"
+    />
+</a>
+<a href="">
+	<img
+    	alt="coverage:?"
+    	src="https://img.shields.io/coveralls/github/datreeio/node-datreeio.svg?style=flat-square"
+    />
+</a>
+ 
 
 ## Summary
 
