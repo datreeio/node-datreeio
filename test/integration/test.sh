@@ -30,6 +30,9 @@ function main {
   # Display version
   node --version
 
+  # Build dist
+  npm run-script build
+
   # Install datreeio
   npm install -g
 
