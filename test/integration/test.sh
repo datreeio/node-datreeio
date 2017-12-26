@@ -31,7 +31,7 @@ function main {
   node --version
 
   # Install datreeio
-  npm install -g datreeio
+  npm install -g
 
   # Test installation
   test install.test.js
@@ -40,7 +40,7 @@ function main {
   install_packages run.test.js
 
   # Uninstall datreeio
-  npm uninstall -g datreeio
+  npm uninstall -g
 
   # Test uninstallation
   test uninstall.test.js
