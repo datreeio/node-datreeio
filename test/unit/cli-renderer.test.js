@@ -25,6 +25,7 @@ describe('Renderer', function() {
             {
               source: {
                 name: 'koa',
+                quality: {},
                 version: '2.4.1',
                 description: 'Koa web app framework',
                 score: {
@@ -37,16 +38,7 @@ describe('Renderer', function() {
                 },
                 publisherUsername: 'jongleberry',
                 license: 'MIT',
-                keywords: [
-                  'web',
-                  'app',
-                  'http',
-                  'application',
-                  'framework',
-                  'middleware',
-                  'rack'
-                ],
-                deprecated: null,
+                keywords: ['web', 'app', 'http', 'application', 'framework', 'middleware', 'rack'],
                 date: '2017-11-06T14:31:37.351Z',
                 status: 'found',
                 size: 1912,
@@ -56,6 +48,7 @@ describe('Renderer', function() {
               alternatives: [
                 {
                   name: 'express',
+                  quality: {},
                   version: '4.16.2',
                   description: 'Fast, unopinionated, minimalist web framework',
                   score: {
@@ -68,18 +61,7 @@ describe('Renderer', function() {
                   },
                   publisherUsername: 'dougwilson',
                   license: 'MIT',
-                  keywords: [
-                    'express',
-                    'framework',
-                    'sinatra',
-                    'web',
-                    'rest',
-                    'restful',
-                    'router',
-                    'app',
-                    'api'
-                  ],
-                  deprecated: null,
+                  keywords: ['express', 'framework', 'sinatra', 'web', 'rest', 'restful', 'router', 'app', 'api'],
                   date: '2017-10-10T03:13:46.364Z',
                   status: 'found',
                   size: 8875,
@@ -88,6 +70,7 @@ describe('Renderer', function() {
                 },
                 {
                   name: 'hapi',
+                  quality: {},
                   version: '17.0.2',
                   description: 'HTTP Server framework',
                   score: {
@@ -166,6 +149,7 @@ describe('Renderer', function() {
         {
           source: {
             name: 'koa',
+            quality: {},
             version: '2.4.1',
             description: 'Koa web app framework',
             score: {
@@ -178,16 +162,7 @@ describe('Renderer', function() {
             },
             publisherUsername: 'jongleberry',
             license: 'MIT',
-            keywords: [
-              'web',
-              'app',
-              'http',
-              'application',
-              'framework',
-              'middleware',
-              'rack'
-            ],
-            deprecated: null,
+            keywords: ['web', 'app', 'http', 'application', 'framework', 'middleware', 'rack'],
             date: '2017-11-06T14:31:37.351Z',
             status: 'found',
             size: 1912,
@@ -197,6 +172,7 @@ describe('Renderer', function() {
           alternatives: [
             {
               name: 'express',
+              quality: {},
               version: '4.16.2',
               description: 'Fast, unopinionated, minimalist web framework',
               score: {
@@ -209,18 +185,8 @@ describe('Renderer', function() {
               },
               publisherUsername: 'dougwilson',
               license: 'MIT',
-              keywords: [
-                'express',
-                'framework',
-                'sinatra',
-                'web',
-                'rest',
-                'restful',
-                'router',
-                'app',
-                'api'
-              ],
-              deprecated: null,
+              keywords: ['express', 'framework', 'sinatra', 'web', 'rest', 'restful', 'router', 'app', 'api'],
+
               date: '2017-10-10T03:13:46.364Z',
               status: 'found',
               size: 8875,
@@ -229,6 +195,7 @@ describe('Renderer', function() {
             },
             {
               name: 'hapi',
+              quality: {},
               version: '17.0.2',
               description: 'HTTP Server framework',
               score: {
@@ -242,7 +209,7 @@ describe('Renderer', function() {
               publisherUsername: 'hueniverse',
               license: 'BSD-3-Clause',
               keywords: ['framework', 'http', 'api', 'web'],
-              deprecated: null,
+
               date: '2017-11-21T07:25:37.190Z',
               status: 'found',
               size: 12589,
@@ -266,9 +233,9 @@ describe('Renderer', function() {
     const renderer = new Renderer({ logger })
     before(function() {
       renderer.renderLink('single', [
-        { source: { name: 'koa', deprecated: true } },
-        { source: { name: 'mongoose', deprecated: true } },
-        { source: { name: 'notDeprecated', deprecated: false } }
+        { source: { name: 'koa', quality: { deprecated: true } } },
+        { source: { name: 'mongoose', quality: { deprecated: true } } },
+        { source: { name: 'notDeprecated', quality: { deprecated: false } } }
       ])
     })
 
@@ -277,12 +244,8 @@ describe('Renderer', function() {
     })
 
     it('should have the correct links for the footer', function() {
-      renderer.queue[0].should.eql(
-        chalk`{blue.bold https://platform.datree.io/pkg/single-package/koa}`
-      )
-      renderer.queue[1].should.eql(
-        chalk`{blue.bold https://platform.datree.io/pkg/single-package/mongoose}`
-      )
+      renderer.queue[0].should.eql(chalk`{blue.bold https://platform.datree.io/pkg/single-package/koa}`)
+      renderer.queue[1].should.eql(chalk`{blue.bold https://platform.datree.io/pkg/single-package/mongoose}`)
     })
   })
 })
