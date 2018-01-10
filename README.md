@@ -46,10 +46,10 @@ with zero effort (there is no need to actively call the package).
 The disadvantage of using onload-script, is that there is no custom configuration option.
 
 If the project doesn't do something you need or want it to do - feel free to fill a feature request:
-* Open an Issue at https://github.com/datreeio/node-datreeio/issues
+* Open an [issue](https://github.com/datreeio/node-datreeio/issues) with 'feat:' prefix in the subject line 
 * Provide as much context as you can about what you're running into
 * Please try and be clear about why existing features and alternatives would not work for you
-* 
+* The project team will prioritize the requested feature or you can [contribute code](https://github.com/datreeio/node-datreeio/blob/master/CONTRIBUTING.md)
 
 ## Collected Data
 in order to provide a better DX (developer experience), we are also collecting users env details.
