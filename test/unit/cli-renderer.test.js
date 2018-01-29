@@ -244,8 +244,8 @@ describe('Renderer', function() {
     })
 
     it('should have the correct links for the footer', function() {
-      renderer.queue[0].should.eql(chalk`{blue.bold https://platform.datree.io/pkg/single-package/koa}`)
-      renderer.queue[1].should.eql(chalk`{blue.bold https://platform.datree.io/pkg/single-package/mongoose}`)
+      renderer.queue[0].should.eql(chalk`{blue.bold https://app.datree.io/pkg/single-package/koa}`)
+      renderer.queue[1].should.eql(chalk`{blue.bold https://app.datree.io/pkg/single-package/mongoose}`)
     })
   })
 })
