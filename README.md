@@ -23,20 +23,18 @@ A Node.js module to help you get useful insights when installing packages/projec
 $ npm install -g datreeio
 ```
 
-**If you want to get the insights in context of your stack, you will need to authenticate datree's app by sign-up with your GitHub account at [datree.io](https://www.datree.io)**
+**If you want to get the insights in context of your stack, you will need to authenticate datree's app by sign-up with your GitHub account at [datree.io](https://app.datree.io)**
 
 ## Features
 
-### Smart Version Insight
-For every package.json you will install (npm install / i), you will get insight about your dependencies versions:
+### Version Insight
+For every project you will install (npm install / i), you will get insight about your dependencies versions:
 * **package.json** - package version in your package.json
-* **Smart Version** - recommended version of package for you to use, even if it's not the latest - based on public usage ("crowd wisdom")
 * **Latest Version** - package latest version available 
 
 ### Alternative Packages Insight
-We are constantly mapping the NPM ecosystem and cataloging alternative packages. This way, when installing a package (npm install %packageName%), 
+We are constantly mapping the NPM ecosystem and cataloging alternative packages. This way, when installing a package (npm install $packageName$), 
 you will get insights about optional alternatives (if there are any), their score and if the package already used in your stack.
-* **Smart Version** - recommended version of package for you to use, even if it's not the latest - based on public usage ("crowd wisdom")
 * **My Usage** - compared to the other alternatives, the percentage of projects in your stack that use this package
 * **Score** - package's final score, based on quality, maintenance, popularity and internal usage
 
@@ -60,4 +58,4 @@ we are collecting the following data:
 * Uninstall statistics
 
 ## About us
-datree scans, catalogs and recommends code components in the context of your stack. Our platform analyzes and factors in the code components you already use, as well as your organizational technology stack preferences to assist developers.
+[datree](https://www.datree.io) scans, catalogs and recommends code components in the context of your stack. Our platform analyzes and factors in the code components you already use, as well as your organizational technology stack preferences to assist developers.
