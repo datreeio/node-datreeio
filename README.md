@@ -1,21 +1,21 @@
 # datree.io
 
-## Node.js Module to integrate with NPM
+## Node.js Module to Integrate with NPM
 
 [![Build Status](https://travis-ci.org/datreeio/node-datreeio.svg?branch=master)](https://travis-ci.org/datreeio/node-datreeio)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Coverage Status](https://coveralls.io/repos/github/datreeio/node-datreeio/badge.svg?branch=master)](https://coveralls.io/github/datreeio/node-datreeio?branch=master)
 
-A Node.js module to help you get useful insights when installing packages/project with NPM.
+A Node.js module to help you get useful insights when installing packages/projects with NPM.
 
-:exclamation: DON'T SUPPORT WINDOWS OS :exclamation:
+:exclamation: We don't currently support Windows OS :exclamation:
 
 ## Table Of Contents:
 * [Installation](https://github.com/datreeio/node-datreeio#installation)
 * [Features](https://github.com/datreeio/node-datreeio#features)
 * [Configure](https://github.com/datreeio/node-datreeio#configure)
 * [Collected Data](https://github.com/datreeio/node-datreeio#collected-data)
-* [About us](https://github.com/datreeio/node-datreeio#about-us)
+* [About Us](https://github.com/datreeio/node-datreeio#about-us)
 
 ## Installation
 
@@ -23,35 +23,36 @@ A Node.js module to help you get useful insights when installing packages/projec
 $ npm install -g datreeio
 ```
 
-**If you want to get the insights in context of your stack, you will need to authenticate datree's app by sign-up with your GitHub account at [datree.io](https://app.datree.io)**
+**If you want to get insights in context with your stack, please sign up at [datree.io](https://app.datree.io) using your Github account.**
 
 ## Features
 
 ### Version Insight
-For every project you will install (npm install / i), you will get insight about your dependencies versions:
+For every project you install (npm install/i), you will get insights into your dependencies and versions:
 * **package.json** - package version in your package.json
 * **Latest Version** - package latest version available 
+![](https://github.com/datreeio/node-datreeio/tree/master/gif/installProjects.gif)
 
 ### Alternative Packages Insight
-We are constantly mapping the NPM ecosystem and cataloging alternative packages. This way, when installing a package (npm install $packageName$), 
-you will get insights about optional alternatives (if there are any), their score and if the package already used in your stack.
-* **My Usage** - compared to the other alternatives, the percentage of projects in your stack that use this package
-* **Score** - package's final score, based on quality, maintenance, popularity and internal usage
+We continuously map the NPM ecosystem and catalog alternative packages. This way, when installing a package (npm install $packageName$), 
+you will get insights about optional alternatives (if any), their score and whether the package is currently being used in your dev stack.
+* **My Usage** - compared to other alternatives, the percentage of projects in your stack that use this package
+* **Score** - packages' final score, based on quality, maintenance, community popularity and internal usage
+![](https://github.com/datreeio/node-datreeio/tree/master/gif/installPackage.gif)
 
 ## Configure
-We decided to base our package on NPM's [onload-script](https://docs.npmjs.com/misc/config#onload-script) in order to provide you continuous insight
+Our package is built off of NPM's [onload-script](https://docs.npmjs.com/misc/config#onload-script) in order to provide you with continuous insight
 with zero effort (there is no need to actively call the package). 
-The disadvantage of using onload-script, is that we can't support user interaction like external module, so **custom configuration option is not available (for now)**.
+The disadvantage of using onload-script, is that we can't support user interactions like external modules, so the **custom configuration option is not currently available**.
 
-If the project doesn't do something you need or want it to do - feel free to fill a feature request:
-* Open an [issue](https://github.com/datreeio/node-datreeio/issues) with 'feat:' prefix in the subject line 
-* Provide as much context as you can about what you're running into
-* Please try and be clear about why existing features and alternatives would not work for you
-* The project team will prioritize the requested feature or you can [contribute code](https://github.com/datreeio/node-datreeio/blob/master/CONTRIBUTING.md)
+If the project is missing a feature you want or need, let us know - send a feature request:
+* Open an [issue](https://github.com/datreeio/node-datreeio/issues) with the 'feat:' prefix in the subject line 
+* Provide as much context as you can regarding the issue or what you would like to see in future releases
+* Please provide some detail about why existing features and alternative packages won't work for you
+* Our project team will prioritize the requested feature or you can [contribute code](https://github.com/datreeio/node-datreeio/blob/master/CONTRIBUTING.md)
 
 ## Collected Data
-In order to provide a better DX (developer experience), we are also collecting users env details.
-we are collecting the following data:
+In order to provide a better DX (developer experience), we are collecting user environment details, specifically:
 * Installation datetime
 * Node.js & binaries versions
 * OS platform, release & name
