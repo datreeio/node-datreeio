@@ -53,14 +53,14 @@ $ npm install -g datreeio
 For every project you install (npm install/i), you will get insights into your dependencies and versions:
 * **package.json** - package version in your package.json
 * **Latest Version** - package latest version available 
-![](https://github.com/datreeio/node-datreeio/tree/master/gif/installProjects.gif)
+![](https://github.com/datreeio/node-datreeio/blob/master/gif/installProject.gif)
 
 ### Alternative Packages Insight
 We continuously map the NPM ecosystem and catalog alternative packages. This way, when installing a package (npm install $packageName$), 
 you will get insights about optional alternatives (if any), their score and whether the package is currently being used in your dev stack.
 * **My Usage** - compared to other alternatives, the percentage of projects in your stack that use this package
 * **Score** - packages' final score, based on quality, maintenance, community popularity and internal usage
-![](https://github.com/datreeio/node-datreeio/tree/master/gif/installPackage.gif)
+![](https://github.com/datreeio/node-datreeio/blob/master/gif/installPackage.gif)
 
 ## Configure
 Our package is built off of NPM's [onload-script](https://docs.npmjs.com/misc/config#onload-script) in order to provide you with continuous insight
