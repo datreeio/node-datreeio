@@ -1,6 +1,7 @@
-# datree.io
 
-## Node.js Module to Integrate with NPM
+<img src="https://i.imgur.com/Sbyh2A1.jpg" width="400" hight="400" alt="https://datree.io"/>
+
+## datree. io Node.js Module to Integrate with NPM
 
 <a href="./LICENSE">
     <img
