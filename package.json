@@ -27,7 +27,7 @@
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^11.2.1",
     "prettier": "1.8.2",
-    "semantic-release": "^8.0.0",
+    "semantic-release": "^8.2.3",
     "sinon": "^2.3.8",
     "snazzy": "^7.0.0",
     "webpack": "^3.5.6"
