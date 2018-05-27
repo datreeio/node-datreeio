@@ -1,5 +1,7 @@
 # datree.io
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/datreeio/node-datreeio.svg)](https://greenkeeper.io/)
+
 ## Node.js Module to Integrate with NPM
 
 <a href="./LICENSE">
